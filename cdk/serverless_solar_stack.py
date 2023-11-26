@@ -20,7 +20,7 @@ class ServerlessSolar(cdk.Stack):
 
         lambda_fn = _lambda.Function(
             self, 'CallApi',
-            runtime=_lambda.Runtime.PYTHON_3_7,
+            runtime=_lambda.Runtime.PYTHON_3_12,
             code=_lambda.Code.from_asset('src/lambdas'),
             handler='call_api.lambda_handler',
             environment={'TABLE_NAME': table_name},
